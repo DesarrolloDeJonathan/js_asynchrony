@@ -1,12 +1,15 @@
 {
   "name": "js_asynchrony",
   "version": "1.0.0",
-  "description": "",
+  "description": "knowledge of callbacks, async, arrow functions for work with asynchronous ",
   "main": "index.js",
   "scripts": {
     "callback": "node callback/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Jo",
+  "license": "ISC",
+  "devDependencies": {
+    "xmlhttprequest": "1.8.0"
+  }
 }
