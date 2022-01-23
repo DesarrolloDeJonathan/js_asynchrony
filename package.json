@@ -4,7 +4,8 @@
   "description": "knowledge of callbacks, async, arrow functions for work with asynchronous ",
   "main": "index.js",
   "scripts": {
-    "callback": "node callback/index.js"
+    "callback": "node callback/index.js",
+    "callapi": "node callback/call_api.js"
   },
   "keywords": [],
   "author": "Jo",

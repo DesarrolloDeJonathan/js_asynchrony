@@ -3,6 +3,9 @@
 // Apartir de ES6 se hace con fetch que dentro usa promesas
 let xmlHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
+// Aqui almacenamos la API para su posterios llamado
+let API = "https://rickandmortyapi.com/api/character/";
+
 function fetchData(url_api, callback) {
   // intanciamos el objeto XMLHttpRequest este elemento fue creado por Microsoft como aporte a JS
   let xhttp = new XMLHttpRequest();
@@ -41,3 +44,24 @@ function fetchData(url_api, callback) {
     xhttp.send();
   };
 }
+
+// ########################   Multiple Requests to an API with Callbacks   #########################
+/** Haremos tres llamados a la API con callbacks
+ * el primer parametro seria la URL de la API
+ * el segundo es una funcion callback que recibe un error y los datos resultantes
+ * lo ideal es solo tener tres llamadas para entender lo que estamos haciendo y no caer en callbak Hell
+ * en caso de tener que hacer mas peticiones proponer otra solucion seria mejor
+ */
+
+fetchData(API, function (error1, data1) {
+  if (error1) return console.log(error1);
+  fetchData(API + data1.results[0].id, function (error2, data2) {
+    if (error2) return console.log(error2);
+    fetchData(data2.origin.url, function (error3, data3) {
+      if (error3) return console.log(error3);
+      console.log(data1.info.count);
+      console.log(data1.name);
+      console.log(data1.dimension);
+    });
+  });
+});
