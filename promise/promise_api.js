@@ -1,6 +1,6 @@
 // instanciamos XMLHttpRequest
 // Ya que estamos trabajando con node haremos la importacion asi
-const fetchData = require("./fetchData.js");
+const fetchData = require("../utils/fetchData");
 const API = "https://rickandmortyapi.com/api/character/";
 
 fetchData(API)

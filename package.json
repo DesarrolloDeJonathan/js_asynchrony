@@ -8,7 +8,8 @@
     "callapi": "node callback/call_api.js",
     "promise": "node promise/index.js",
     "promiseapi": "node promise/promise_api.js",
-    "async": "node async/index.js"
+    "async": "node async/index.js",
+    "asyncapi": "node async/async_api.js"
   },
   "keywords": [],
   "author": "Jo",
