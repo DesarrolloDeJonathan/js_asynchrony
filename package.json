@@ -6,7 +6,8 @@
   "scripts": {
     "callback": "node callback/index.js",
     "callapi": "node callback/call_api.js",
-    "promise": "node promise/index.js"
+    "promise": "node promise/index.js",
+    "promiseapi": "node promise/promise_api.js"
   },
   "keywords": [],
   "author": "Jo",
